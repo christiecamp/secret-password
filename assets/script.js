@@ -24,6 +24,7 @@ function writePassword() {
 function generatePassword() {
 
     var passwordCharSet = ""; //character set string
+    // A string is a series of characters and is surrounded by quotes 
     
     var length = window.prompt("Enter a number from 8 to 128 for password length.")
 
@@ -58,10 +59,15 @@ function generatePassword() {
       password += passwordCharSet[Math.floor(Math.random() * passwordCharSet.length)]
     }
 
-    
+
     console.log(password); //shows password in console log
     // To access a value stored in a variable, use the variable's name
     return password;
   }
 
 generateBtn.addEventListener("click", writePassword); //click to engage prompts
+
+
+
+
+// Pro-tip: JavaScript is loosely typed, so the type is tied to the value held in the variable, not the variable itself!
