@@ -7,8 +7,8 @@ var generateBtn = document.querySelector("#generate");
 const char_set = {
   lowercase: 'abcdefghijklmnopqrstuvwxyz',
   uppercase: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
-  number: '0123456789',
-  symbol: '#$%&!@',
+  symbols: '#$%&!@',
+  numbers: '0123456789',
 };
 
 // write password to the #password input
@@ -53,7 +53,7 @@ function generatePassword() {
     var symbols = window.confirm("Would you like to use symbols?");
     console.log ("Would you like to use symbols?");
     if (symbols) {
-      passwordCharSet += char_set.symbol;
+      passwordCharSet += char_set.symbols;
       console.log ("You chose to select a symbol");
     } else {
       console.log ("You chose not to select a symbol");
@@ -63,7 +63,7 @@ function generatePassword() {
     var numbers = window.confirm("Would you like to use numbers?");
     console.log ("Would you like to use numbers?");
     if (numbers) {
-      passwordCharSet += char_set.number;
+      passwordCharSet += char_set.numbers;
       console.log ("You chose to select a number");
     } else {
       console.log ("You chose not to select a number");
