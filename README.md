@@ -51,14 +51,14 @@ Modify starter code to create an application that enables employees to generate 
 
 The following image shows the web application's appearance and functionality:
 
-![The Password Generator application displays a red button to "Generate Password".](./assets/js-demo.png)
+![The Password Generator application displays a red button to "Generate Password".](./assets/images/js-demo.png)
 
 
 ## Project Screen Grab w/ Console
 
 The following image shows my finished project, with console opened:
 
-![The Password Generator application displays a red button to "Generate Password".](./assets/secret-password-ss.png)
+![The Password Generator application displays a red button to "Generate Password".](./assets/images/secret-password-ss.png)
 
 
 ## Changes Made to Code
