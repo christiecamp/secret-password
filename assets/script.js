@@ -1,7 +1,9 @@
 // Assignment Code
+//declares variable using var keyword
 var generateBtn = document.querySelector("#generate");
 
-//Special characters for the function
+//Special characters for the function. Seperated for each prompt
+//uses assignment operator (=) to assign a value
 const char_set = {
   lowercase: 'abcdefghijklmnopqrstuvwxyz',
   uppercase: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
@@ -23,32 +25,42 @@ function generatePassword() {
 
     var passwordCharSet = ""; //character set string
     
-    var length = window.prompt("Enter a number from 8 to 128 for password length.");
+    var length = window.prompt("Enter a number from 8 to 128 for password length.")
+
+    console.log ("Enter a number from 8 to 128 for password length.");
   
     var lowercase = window.confirm("Would you like to use lowercase letters?");
     if (lowercase) {
       passwordCharSet += char_set.lowercase;
+      console.log ("Would you like to use lowercase letters?");
     };
   
     var uppercase = window.confirm("Would you like to use uppercase letters?");
     if (uppercase) {
       passwordCharSet += char_set.uppercase;
+      console.log ("Would you like to use uppercase letters?");
     };
   
     var symbols = window.confirm("Would you like to use symbols?");
     if (symbols) {
       passwordCharSet += char_set.symbol;
+      console.log ("Would you like to use symbols?");
     };
   
     var numbers = window.confirm("Would you like to use numbers?");
     if (numbers) {
       passwordCharSet += char_set.number;
+      console.log ("Would you like to use numbers?");
     };
+
     var password = "";
     for (let i = 0; i < length; i++) {
       password += passwordCharSet[Math.floor(Math.random() * passwordCharSet.length)]
     }
+
+    
     console.log(password); //shows password in console log
+    // To access a value stored in a variable, use the variable's name
     return password;
   }
 
