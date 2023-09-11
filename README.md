@@ -28,7 +28,7 @@ Modify starter code to create an application that enables employees to generate 
 
 **WHEN** prompted for the length of the password
 
-**THEN**I choose a length of at least 8 characters and no more than 128 characters
+**THEN** I choose a length of at least 8 characters and no more than 128 characters
 
 **WHEN** asked for character types to include in the password
 
@@ -44,7 +44,7 @@ Modify starter code to create an application that enables employees to generate 
 
 **WHEN** the password is generated
 
-**THEN** he password is either displayed in an alert or written to the page
+**THEN** the password is either displayed in an alert or written to the page
 
 
 ## Mock-Up

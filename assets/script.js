@@ -21,8 +21,8 @@ function writePassword() {
 //Promts for each click
 function generatePassword() {
 
-    var passwordCharSet = "";
-
+    var passwordCharSet = ""; //character set string
+    
     var length = window.prompt("Enter a number from 8 to 128 for password length.");
   
     var lowercase = window.confirm("Would you like to use lowercase letters?");
@@ -42,15 +42,14 @@ function generatePassword() {
   
     var numbers = window.confirm("Would you like to use numbers?");
     if (numbers) {
-      passwordCharSet += chart_set.number;
+      passwordCharSet += char_set.number;
     };
     var password = "";
     for (let i = 0; i < length; i++) {
       password += passwordCharSet[Math.floor(Math.random() * passwordCharSet.length)]
     }
+    console.log(password); //shows password in console log
     return password;
   }
 
-generateBtn.addEventListener("click", writePassword());
-
-console.log (generatePassword ()); //shows password in console log
+generateBtn.addEventListener("click", writePassword); //click to engage prompts
