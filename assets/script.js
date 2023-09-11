@@ -37,7 +37,7 @@ function generatePassword() {
       console.log ("You chose to select a lowercase letter");
     } else {
       console.log ("You chose not to select a lowercase letter");
-    }
+    };
   
 
     var uppercase = window.confirm("Would you like to use uppercase letters?");
@@ -47,7 +47,7 @@ function generatePassword() {
       console.log ("You chose to select an uppercase letter");
     } else {
       console.log ("You chose not to select an uppercase letter");
-    }
+    };
   
   
     var symbols = window.confirm("Would you like to use symbols?");
@@ -57,7 +57,7 @@ function generatePassword() {
       console.log ("You chose to select a symbol");
     } else {
       console.log ("You chose not to select a symbol");
-    }
+    };
 
   
     var numbers = window.confirm("Would you like to use numbers?");
@@ -67,12 +67,12 @@ function generatePassword() {
       console.log ("You chose to select a number");
     } else {
       console.log ("You chose not to select a number");
-    }
+    };
 
     var password = "";
     for (let i = 0; i < length; i++) {
       password += passwordCharSet[Math.floor(Math.random() * passwordCharSet.length)]
-    }
+    };
     
     console.log(password); // to access a value stored in a variable, use the variable's name
     // shows password in console log
