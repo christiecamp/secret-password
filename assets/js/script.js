@@ -1,5 +1,6 @@
 // assignment code
 // a variable declared in global scope is available to all functions
+// variable declariation expression
 var generateBtn = document.querySelector("#generate");
 
 // special characters for the function. seperated for each prompt
