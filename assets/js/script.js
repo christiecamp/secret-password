@@ -1,9 +1,10 @@
 // assignment code
-// declares variable using var keyword
+// a variable declared in global scope is available to all functions
 var generateBtn = document.querySelector("#generate");
 
 // special characters for the function. seperated for each prompt
 // uses assignment operator (=) to assign a value
+// const are a collection of properties
 const char_set = {
   lowercase: 'abcdefghijklmnopqrstuvwxyz',
   uppercase: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
@@ -12,9 +13,13 @@ const char_set = {
 };
 
 // write password to the #password input
+// functions are reusable blocks of code that perform a specific task
+// this is a function declaration
+//a variable declared in local scope is only available to that function
 function writePassword() {
+  // this is a function expression
   var password = generatePassword(); //calls upon generatepassword function
-  var passwordText = document.querySelector("#password");
+  var passwordText = document.querySelector("#password"); // accesses element by ID using .queryselector
   passwordText.value = password; //associating password with input box
 }
 
@@ -22,12 +27,21 @@ function writePassword() {
 // promts for each click
 function generatePassword() {
 
-    var passwordCharSet = ""; 
+    var passwordCharSet = "";
+
+    //using below as template to set character limit
+//  if ( (passwordCharSet <= 8) && (passwordCharSet >= 128) ) {
+//      return true;
+//    } else {
+//     return false;
+//      };
+
     // character set string
     // a string is a series of characters and is surrounded by quotes 
     
     var length = window.prompt("Enter a number from 8 to 128 for password length.");
     console.log ("Enter a number from 8 to 128 for password length.");
+
   
     var lowercase = window.confirm("Would you like to use lowercase letters?");
     console.log ("Would you like to use lowercase letters?");
@@ -69,10 +83,14 @@ function generatePassword() {
       console.log ("You chose not to select a number");
     };
 
+    // for-loop executes code more than once
+    // to determine how many times the loop should execute, we use the length - loops through prompts
     var password = "";
     for (let i = 0; i < length; i++) {
-      password += passwordCharSet[Math.floor(Math.random() * passwordCharSet.length)]
-    };
+      password += passwordCharSet[Math.floor(Math.random() * passwordCharSet.length)]};
+      // math.random() used with Math.floor() can be used to return random characters - passwordcharset
+      // math.floor() is used to return the closest integer that's smaller than or equal to the given number. 
+
     
     console.log(password); // to access a value stored in a variable, use the variable's name
     // shows password in console log
