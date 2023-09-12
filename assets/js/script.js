@@ -42,8 +42,9 @@ function generatePassword() {
     
     var length = window.prompt("Enter a number from 8 to 128 for password length.");
     console.log ("Enter a number from 8 to 128 for password length.");
+    
 
-  
+    //lowercase prompt
     var lowercase = window.confirm("Would you like to use lowercase letters?");
     console.log ("Would you like to use lowercase letters?");
     // if-else statement - depending on selection, it will display as true (chose to select) or false (not chosen)
@@ -54,7 +55,7 @@ function generatePassword() {
       console.log ("You chose not to select a lowercase letter");
     };
   
-
+    //uppercase promp
     var uppercase = window.confirm("Would you like to use uppercase letters?");
     console.log ("Would you like to use uppercase letters?");
     if (uppercase) {
@@ -64,7 +65,7 @@ function generatePassword() {
       console.log ("You chose not to select an uppercase letter");
     };
   
-  
+    //symbol prompt
     var symbols = window.confirm("Would you like to use symbols?");
     console.log ("Would you like to use symbols?");
     if (symbols) {
@@ -74,7 +75,7 @@ function generatePassword() {
       console.log ("You chose not to select a symbol");
     };
 
-  
+  //number prompt
     var numbers = window.confirm("Would you like to use numbers?");
     console.log ("Would you like to use numbers?");
     if (numbers) {
