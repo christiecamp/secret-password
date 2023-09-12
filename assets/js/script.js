@@ -29,14 +29,6 @@ function writePassword() {
 function generatePassword() {
 
     var passwordCharSet = "";
-
-    //using below as template to set character limit
-//  if ( (passwordCharSet <= 8) && (passwordCharSet >= 128) ) {
-//      return true;
-//    } else {
-//     return false;
-//      };
-
     // character set string
     // a string is a series of characters and is surrounded by quotes 
     
@@ -44,6 +36,11 @@ function generatePassword() {
     // window.prompt instructs the browser to display a dialog with an optional message prompting the user to input their number
     console.log ("Enter a number from 8 to 128 for password length.");
 
+    //creating character limit
+    if ( (length < 8) || (length > 128) ) {
+      alert("You must choose between 8 and 128 characters");
+      return; // return function
+    };
 
     // lowercase prompt
     var lowercase = window.confirm("Would you like to use lowercase letters?");
@@ -86,6 +83,12 @@ function generatePassword() {
     } else {
       console.log ("You chose not to select a number");
     };
+
+    //checking to ensure one of the prompts is used - or undefined
+    if (!lowercase && !uppercase && !symbols && !numbers) {
+      alert("You must choose a secret")
+      return;
+    }
 
     // for-loop executes code more than once
     // to determine how many times the loop should execute, we use the length - loops through prompts
