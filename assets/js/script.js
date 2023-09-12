@@ -41,11 +41,13 @@ function generatePassword() {
     // a string is a series of characters and is surrounded by quotes 
     
     var length = window.prompt("Enter a number from 8 to 128 for password length.");
+    // window.prompt instructs the browser to display a dialog with an optional message prompting the user to input their number
     console.log ("Enter a number from 8 to 128 for password length.");
-    
 
-    //lowercase prompt
+
+    // lowercase prompt
     var lowercase = window.confirm("Would you like to use lowercase letters?");
+    // window.confirm instructs the browser to display a dialog with an optional message and wait until the user confirms or cancels the dialog.
     console.log ("Would you like to use lowercase letters?");
     // if-else statement - depending on selection, it will display as true (chose to select) or false (not chosen)
     if (lowercase) {
@@ -55,7 +57,7 @@ function generatePassword() {
       console.log ("You chose not to select a lowercase letter");
     };
   
-    //uppercase promp
+    // uppercase promp
     var uppercase = window.confirm("Would you like to use uppercase letters?");
     console.log ("Would you like to use uppercase letters?");
     if (uppercase) {
